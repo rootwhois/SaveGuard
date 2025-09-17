@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "SaveGuard",
+    "version": "Version",
+    "about": "About",
+    "exit": "Exit",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "main_window": {
+    "title": "SaveGuard",
+    "monitoring": "Monitoring...",
+    "waiting": "Waiting for programs...",
+    "programs": "Programs",
+    "status": "Status"
+  },
+  "menu": {
+    "select_apps": "Select Applications",
+    "manage_programs": "Manage Programs",
+    "settings": "Settings",
+    "history": "Reminder History",
+    "auto_save": "Auto Save on Focus",
+    "hourly_remind": "Hourly Reminder",
+    "check_update": "Check for Updates",
+    "about": "About",
+    "quit": "Quit"
+  },
+  "bubble": {
+    "title": "SaveGuard Reminder",
+    "save_now": "One-Click Save",
+    "welcome": "Detected {program} program is open, please remember to save your work!",
+    "remind": "Program '{program}' has been running for more than {minutes} minutes\n{message}",
+    "hourly": "Hourly reminder: Please check if you need to save your current work!"
+  },
+  "settings": {
+    "title": "SaveGuard Advanced Settings",
+    "basic_settings": "Basic Settings",
+    "message_settings": "Message Settings",
+    "remind_interval": "Reminder Interval",
+    "bubble_duration": "Bubble Display Duration",
+    "remind_frequency": "Reminder Frequency",
+    "sound_enabled": "Enable Sound Reminder",
+    "focus_auto_save_enabled": "Auto Save on Focus",
+    "hourly_remind_enabled": "Enable Hourly Reminder",
+    "welcome_message_enabled": "Show Welcome Message on Program Open",
+    "auto_select_apps": "Auto Select Applications",
+    "default_message": "Default Message",
+    "code_message": "Code Editor",
+    "document_message": "Office Software",
+    "design_message": "Design Tools",
+    "welcome_message": "Welcome Message",
+    "hourly_message": "Hourly Reminder",
+    "language": "Language",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "apply": "Apply"
+  },
+  "program_manager": {
+    "title": "Manage Monitored Programs",
+    "program_list": "Monitored Program List",
+    "add_program": "Add Program",
+    "remove_program": "Remove Program",
+    "program_name": "Program Name",
+    "add": "Add",
+    "remove": "Remove"
+  },
+  "app_selection": {
+    "title": "Select Applications to Monitor",
+    "select_apps": "Select Applications to Monitor",
+    "loading": "Loading application list...",
+    "refresh": "Refresh List",
+    "select_all": "Select All",
+    "clear_selection": "Clear Selection",
+    "running": "Running",
+    "not_running": "Not Running"
+  },
+  "history": {
+    "title": "Reminder History",
+    "recent_records": "Recent Reminder Records",
+    "clear_history": "Clear History",
+    "close": "Close"
+  },
+  "messages": {
+    "default": "Please remember to save your work!",
+    "code": "Code has been modified, remember to save!",
+    "document": "Document has been edited, please save in time!",
+    "design": "Design file has been modified, remember to save!",
+    "welcome": "Detected {program} program is open, please remember to save your work!",
+    "hourly": "Hourly reminder: Please check if you need to save your current work!"
+  },
+  "about": {
+    "title": "About SaveGuard",
+    "version": "Version",
+    "description": "Cross-platform program save reminder tool",
+    "features": "Main Features",
+    "tech_features": "Technical Features",
+    "project_url": "Project URL",
+    "copyright": "Copyright"
+  },
+  "update": {
+    "title": "Check for Updates",
+    "opened_release_page": "GitHub Release page has been opened. You can view the latest version and download information.",
+    "open_failed": "Open Failed",
+    "open_failed_msg": "Unable to open Release page"
+  }
+}

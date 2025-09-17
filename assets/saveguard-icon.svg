@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="128" cy="128" r="120" fill="#0078d4" stroke="#ffffff" stroke-width="8"/>
+  
+  <!-- 内部装饰圆环 -->
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.3"/>
+  
+  <!-- 主图标：盾牌形状代表保护/监控 -->
+  <path d="M128 40 L180 80 L180 140 C180 160 160 180 140 180 L116 180 C96 180 76 160 76 140 L76 80 Z" 
+        fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
+  
+  <!-- 盾牌内部：保存图标 (Ctrl+S) -->
+  <!-- S字母 -->
+  <path d="M110 100 C110 90 120 85 130 85 C140 85 150 90 150 100 C150 110 140 115 130 115 C120 115 110 120 110 130 C110 140 120 145 130 145 C140 145 150 140 150 130" 
+        fill="#0078d4" stroke="none" stroke-width="3"/>
+  
+  <!-- Ctrl键标识 -->
+  <rect x="90" y="160" width="30" height="20" rx="3" fill="#ffffff" stroke="#0078d4" stroke-width="1"/>
+  <text x="105" y="173" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#0078d4">Ctrl</text>
+  
+  <!-- 加号 -->
+  <circle cx="160" cy="170" r="12" fill="#ffffff" stroke="#0078d4" stroke-width="1"/>
+  <line x1="154" y1="170" x2="166" y2="170" stroke="#0078d4" stroke-width="2"/>
+  <line x1="160" y1="164" x2="160" y2="176" stroke="#0078d4" stroke-width="2"/>
+  
+  <!-- 监控/提醒元素：小眼睛 -->
+  <circle cx="200" cy="80" r="15" fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
+  <circle cx="200" cy="80" r="8" fill="#0078d4"/>
+  <circle cx="202" cy="78" r="3" fill="#ffffff"/>
+  
+  <!-- 提醒气泡 -->
+  <path d="M200 100 L190 95 L200 90 Z" fill="#ffffff"/>
+  <rect x="180" y="100" width="40" height="25" rx="5" fill="#ffffff" stroke="#0078d4" stroke-width="1"/>
+  <text x="200" y="115" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#0078d4">!</text>
+  
+  <!-- 底部装饰：保存进度条 -->
+  <rect x="60" y="200" width="136" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+  <rect x="60" y="200" width="100" height="8" rx="4" fill="#ffffff"/>
+  
+  <!-- 版本标识 -->
+  <text x="128" y="240" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">SG</text>
+</svg>

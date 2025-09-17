@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "SaveGuard",
+    "version": "버전",
+    "about": "정보",
+    "exit": "종료",
+    "settings": "설정",
+    "help": "도움말"
+  },
+  "main_window": {
+    "title": "SaveGuard",
+    "monitoring": "모니터링 중...",
+    "waiting": "프로그램 대기 중...",
+    "programs": "프로그램",
+    "status": "상태"
+  },
+  "menu": {
+    "select_apps": "애플리케이션 선택",
+    "manage_programs": "프로그램 관리",
+    "settings": "설정",
+    "history": "알림 기록",
+    "auto_save": "포커스 시 자동 저장",
+    "hourly_remind": "시간별 알림",
+    "check_update": "업데이트 확인",
+    "about": "정보",
+    "quit": "종료"
+  },
+  "bubble": {
+    "title": "SaveGuard 알림",
+    "save_now": "원클릭 저장",
+    "welcome": "{program} 프로그램이 열려있는 것을 감지했습니다. 작업 내용을 저장하는 것을 잊지 마세요!",
+    "remind": "프로그램 '{program}'이 {minutes} 분 이상 실행되었습니다\n{message}",
+    "hourly": "시간별 알림: 현재 작업을 저장해야 하는지 확인해주세요!"
+  },
+  "settings": {
+    "title": "SaveGuard 고급 설정",
+    "basic_settings": "기본 설정",
+    "message_settings": "메시지 설정",
+    "remind_interval": "알림 간격",
+    "bubble_duration": "버블 표시 시간",
+    "remind_frequency": "알림 빈도",
+    "sound_enabled": "소리 알림 활성화",
+    "focus_auto_save_enabled": "포커스 시 자동 저장",
+    "hourly_remind_enabled": "시간별 알림 활성화",
+    "welcome_message_enabled": "프로그램 열기 시 환영 메시지 표시",
+    "auto_select_apps": "애플리케이션 자동 선택",
+    "default_message": "기본 메시지",
+    "code_message": "코드 에디터",
+    "document_message": "오피스 소프트웨어",
+    "design_message": "디자인 도구",
+    "welcome_message": "환영 메시지",
+    "hourly_message": "시간별 알림",
+    "language": "언어",
+    "ok": "확인",
+    "cancel": "취소",
+    "apply": "적용"
+  },
+  "program_manager": {
+    "title": "모니터링 프로그램 관리",
+    "program_list": "모니터링 프로그램 목록",
+    "add_program": "프로그램 추가",
+    "remove_program": "프로그램 삭제",
+    "program_name": "프로그램 이름",
+    "add": "추가",
+    "remove": "삭제"
+  },
+  "app_selection": {
+    "title": "모니터링할 애플리케이션 선택",
+    "select_apps": "모니터링할 애플리케이션 선택",
+    "loading": "애플리케이션 목록 로딩 중...",
+    "refresh": "목록 새로고침",
+    "select_all": "모두 선택",
+    "clear_selection": "선택 해제",
+    "running": "실행 중",
+    "not_running": "실행 안됨"
+  },
+  "history": {
+    "title": "알림 기록",
+    "recent_records": "최근 알림 기록",
+    "clear_history": "기록 지우기",
+    "close": "닫기"
+  },
+  "messages": {
+    "default": "작업 내용을 저장하는 것을 잊지 마세요!",
+    "code": "코드가 수정되었습니다. 저장하는 것을 잊지 마세요!",
+    "document": "문서가 편집되었습니다. 시간 내에 저장해주세요!",
+    "design": "디자인 파일이 수정되었습니다. 저장하는 것을 잊지 마세요!",
+    "welcome": "{program} 프로그램이 열려있는 것을 감지했습니다. 작업 내용을 저장하는 것을 잊지 마세요!",
+    "hourly": "시간별 알림: 현재 작업을 저장해야 하는지 확인해주세요!"
+  },
+  "about": {
+    "title": "SaveGuard 정보",
+    "version": "버전",
+    "description": "크로스 플랫폼 프로그램 저장 알림 도구",
+    "features": "주요 기능",
+    "tech_features": "기술적 특징",
+    "project_url": "프로젝트 URL",
+    "copyright": "저작권"
+  },
+  "update": {
+    "title": "업데이트 확인",
+    "opened_release_page": "GitHub Release 페이지가 열렸습니다. 최신 버전과 다운로드 정보를 확인할 수 있습니다.",
+    "open_failed": "열기 실패",
+    "open_failed_msg": "Release 페이지를 열 수 없습니다"
+  }
+}

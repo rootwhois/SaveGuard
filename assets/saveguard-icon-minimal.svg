@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#106ebe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="128" cy="128" r="120" fill="url(#bgGradient)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- 主图标：盾牌形状 -->
+  <path d="M128 60 L160 85 L160 125 C160 140 145 155 130 155 L126 155 C111 155 96 140 96 125 L96 85 Z" 
+        fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
+  
+  <!-- 盾牌内部：保存图标 (S) -->
+  <path d="M115 100 C115 95 120 92 125 92 C130 92 135 95 135 100 C135 105 130 108 125 108 C120 108 115 111 115 116 C115 121 120 124 125 124 C130 124 135 121 135 116" 
+        fill="#0078d4" stroke="none" stroke-width="3"/>
+  
+  <!-- Ctrl+S 标识 -->
+  <rect x="105" y="140" width="20" height="15" rx="2" fill="#ffffff" stroke="#0078d4" stroke-width="1"/>
+  <text x="115" y="150" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="#0078d4">Ctrl+S</text>
+  
+  <!-- 监控元素：小眼睛 -->
+  <circle cx="180" cy="100" r="10" fill="#ffffff" stroke="#0078d4" stroke-width="2"/>
+  <circle cx="180" cy="100" r="5" fill="#0078d4"/>
+  <circle cx="181" cy="99" r="1.5" fill="#ffffff"/>
+  
+  <!-- 提醒气泡 -->
+  <path d="M180 115 L175 110 L180 105 Z" fill="#ffffff"/>
+  <rect x="170" y="115" width="20" height="15" rx="2" fill="#ffffff" stroke="#0078d4" stroke-width="1"/>
+  <text x="180" y="125" font-family="Arial, sans-serif" font-size="6" font-weight="bold" text-anchor="middle" fill="#0078d4">!</text>
+</svg>

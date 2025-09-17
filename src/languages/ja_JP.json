@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "SaveGuard",
+    "version": "バージョン",
+    "about": "について",
+    "exit": "終了",
+    "settings": "設定",
+    "help": "ヘルプ"
+  },
+  "main_window": {
+    "title": "SaveGuard",
+    "monitoring": "監視中...",
+    "waiting": "プログラム待機中...",
+    "programs": "プログラム",
+    "status": "ステータス"
+  },
+  "menu": {
+    "select_apps": "アプリケーション選択",
+    "manage_programs": "プログラム管理",
+    "settings": "設定",
+    "history": "リマインダー履歴",
+    "auto_save": "フォーカス時自動保存",
+    "hourly_remind": "毎時リマインダー",
+    "check_update": "アップデートを確認",
+    "about": "について",
+    "quit": "終了"
+  },
+  "bubble": {
+    "title": "SaveGuard リマインダー",
+    "save_now": "ワンクリック保存",
+    "welcome": "{program}プログラムが開かれていることを検出しました。作業内容を保存することをお忘れなく！",
+    "remind": "プログラム '{program}' が {minutes} 分以上実行されています\n{message}",
+    "hourly": "毎時リマインダー：現在の作業を保存する必要があるかご確認ください！"
+  },
+  "settings": {
+    "title": "SaveGuard 詳細設定",
+    "basic_settings": "基本設定",
+    "message_settings": "メッセージ設定",
+    "remind_interval": "リマインダー間隔",
+    "bubble_duration": "バブル表示時間",
+    "remind_frequency": "リマインダー頻度",
+    "sound_enabled": "音声リマインダーを有効にする",
+    "focus_auto_save_enabled": "フォーカス時の自動保存",
+    "hourly_remind_enabled": "毎時リマインダーを有効にする",
+    "welcome_message_enabled": "プログラム開封時のウェルカムメッセージを表示",
+    "auto_select_apps": "アプリケーション自動選択",
+    "default_message": "デフォルトメッセージ",
+    "code_message": "コードエディター",
+    "document_message": "オフィスソフトウェア",
+    "design_message": "デザインツール",
+    "welcome_message": "ウェルカムメッセージ",
+    "hourly_message": "毎時リマインダー",
+    "language": "言語",
+    "ok": "OK",
+    "cancel": "キャンセル",
+    "apply": "適用"
+  },
+  "program_manager": {
+    "title": "監視プログラム管理",
+    "program_list": "監視プログラムリスト",
+    "add_program": "プログラム追加",
+    "remove_program": "プログラム削除",
+    "program_name": "プログラム名",
+    "add": "追加",
+    "remove": "削除"
+  },
+  "app_selection": {
+    "title": "監視するアプリケーションを選択",
+    "select_apps": "監視するアプリケーションを選択",
+    "loading": "アプリケーションリストを読み込み中...",
+    "refresh": "リスト更新",
+    "select_all": "すべて選択",
+    "clear_selection": "選択解除",
+    "running": "実行中",
+    "not_running": "未実行"
+  },
+  "history": {
+    "title": "リマインダー履歴",
+    "recent_records": "最近のリマインダー記録",
+    "clear_history": "履歴クリア",
+    "close": "閉じる"
+  },
+  "messages": {
+    "default": "作業内容を保存することをお忘れなく！",
+    "code": "コードが変更されました。保存することをお忘れなく！",
+    "document": "ドキュメントが編集されました。時間内に保存してください！",
+    "design": "デザインファイルが変更されました。保存することをお忘れなく！",
+    "welcome": "{program}プログラムが開かれていることを検出しました。作業内容を保存することをお忘れなく！",
+    "hourly": "毎時リマインダー：現在の作業を保存する必要があるかご確認ください！"
+  },
+  "about": {
+    "title": "SaveGuard について",
+    "version": "バージョン",
+    "description": "クロスプラットフォームプログラム保存リマインダーツール",
+    "features": "主な機能",
+    "tech_features": "技術的特徴",
+    "project_url": "プロジェクトURL",
+    "copyright": "著作権"
+  },
+  "update": {
+    "title": "アップデート確認",
+    "opened_release_page": "GitHub Releaseページが開かれました。最新バージョンとダウンロード情報を確認できます。",
+    "open_failed": "開く失敗",
+    "open_failed_msg": "Releaseページを開けません"
+  }
+}

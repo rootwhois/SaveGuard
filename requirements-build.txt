@@ -1,0 +1,18 @@
+# SaveGuard Build Dependencies
+# Build dependencies for SaveGuard
+
+# Core build tools
+pyinstaller>=5.13.0
+upx-ucl>=4.0.0; sys_platform == "win32"
+upx>=4.0.0; sys_platform != "win32"
+
+# Optional optimization tools
+auto-py-to-exe>=2.40.0
+pyinstaller-hooks-contrib>=2023.6
+
+# Code analysis tools (optional)
+pyinstaller-utils>=0.1.0
+
+# Platform specific dependencies
+pywin32>=306; sys_platform == "win32"
+pyobjc>=9.0; sys_platform == "darwin"

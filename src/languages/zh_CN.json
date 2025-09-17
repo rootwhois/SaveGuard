@@ -1,0 +1,106 @@
+{
+  "app": {
+    "title": "SaveGuard",
+    "version": "版本",
+    "about": "关于",
+    "exit": "退出",
+    "settings": "设置",
+    "help": "帮助"
+  },
+  "main_window": {
+    "title": "SaveGuard",
+    "monitoring": "监控中...",
+    "waiting": "等待程序...",
+    "programs": "程序",
+    "status": "状态"
+  },
+  "menu": {
+    "select_apps": "选择应用程序",
+    "manage_programs": "管理程序",
+    "settings": "设置",
+    "history": "提醒历史",
+    "auto_save": "聚焦时自动保存",
+    "hourly_remind": "整点提醒",
+    "check_update": "检查更新",
+    "about": "关于",
+    "quit": "退出"
+  },
+  "bubble": {
+    "title": "SaveGuard 提醒",
+    "save_now": "一键保存",
+    "welcome": "检测到已打开{program}程序，请记得及时保存劳动成果！",
+    "remind": "程序 '{program}' 已运行超过 {minutes} 分钟\n{message}",
+    "hourly": "整点提醒：请检查是否需要保存当前工作！"
+  },
+  "settings": {
+    "title": "SaveGuard 高级设置",
+    "basic_settings": "基本设置",
+    "message_settings": "消息设置",
+    "remind_interval": "提醒间隔",
+    "bubble_duration": "气泡显示时长",
+    "remind_frequency": "提醒频率",
+    "sound_enabled": "启用声音提醒",
+    "focus_auto_save_enabled": "聚焦时自动保存",
+    "hourly_remind_enabled": "启用整点提醒",
+    "welcome_message_enabled": "显示程序打开欢迎消息",
+    "auto_select_apps": "自动选择应用程序",
+    "default_message": "默认消息",
+    "code_message": "代码编辑器",
+    "document_message": "办公软件",
+    "design_message": "设计工具",
+    "welcome_message": "欢迎消息",
+    "hourly_message": "整点提醒",
+    "language": "语言",
+    "ok": "确定",
+    "cancel": "取消",
+    "apply": "应用"
+  },
+  "program_manager": {
+    "title": "管理监控程序",
+    "program_list": "监控程序列表",
+    "add_program": "添加程序",
+    "remove_program": "删除程序",
+    "program_name": "程序名称",
+    "add": "添加",
+    "remove": "删除"
+  },
+  "app_selection": {
+    "title": "选择要监控的应用程序",
+    "select_apps": "选择要监控的应用程序",
+    "loading": "正在加载应用程序列表...",
+    "refresh": "刷新列表",
+    "select_all": "全选",
+    "clear_selection": "清空选择",
+    "running": "运行中",
+    "not_running": "未运行"
+  },
+  "history": {
+    "title": "提醒历史",
+    "recent_records": "最近提醒记录",
+    "clear_history": "清空历史",
+    "close": "关闭"
+  },
+  "messages": {
+    "default": "请记得保存您的劳动成果！",
+    "code": "代码已修改，记得保存！",
+    "document": "文档已编辑，请及时保存！",
+    "design": "设计文件已修改，记得保存！",
+    "welcome": "检测到已打开{program}程序，请记得及时保存劳动成果！",
+    "hourly": "整点提醒：请检查是否需要保存当前工作！"
+  },
+  "about": {
+    "title": "关于 SaveGuard",
+    "version": "版本",
+    "description": "跨平台程序保存提醒工具",
+    "features": "主要功能",
+    "tech_features": "技术特性",
+    "project_url": "项目地址",
+    "copyright": "版权所有"
+  },
+  "update": {
+    "title": "检查更新",
+    "opened_release_page": "已打开GitHub Release页面，您可以查看最新版本和下载信息。",
+    "open_failed": "打开失败",
+    "open_failed_msg": "无法打开Release页面"
+  }
+}

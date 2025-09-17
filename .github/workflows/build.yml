@@ -1,0 +1,179 @@
+name: Build SaveGuard for All Platforms
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        arch: [x64, x86, arm64]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller>=5.13.0
+    
+    - name: Build Windows ${{ matrix.arch }}
+      run: |
+        python build_all.py --platforms windows --force
+    
+    - name: Upload Windows artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: saveguard-windows-${{ matrix.arch }}
+        path: dist/SaveGuard-Windows-${{ matrix.arch }}.exe
+
+  build-macos:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        arch: [x86_64, arm64, universal]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Qt dependencies
+      run: |
+        brew install qt@5
+        echo "QT_DIR=$(brew --prefix qt@5)" >> $GITHUB_ENV
+        echo "PATH=$(brew --prefix qt@5)/bin:$PATH" >> $GITHUB_ENV
+        echo "PKG_CONFIG_PATH=$(brew --prefix qt@5)/lib/pkgconfig:$PKG_CONFIG_PATH" >> $GITHUB_ENV
+        echo "LDFLAGS=-L$(brew --prefix qt@5)/lib" >> $GITHUB_ENV
+        echo "CPPFLAGS=-I$(brew --prefix qt@5)/include" >> $GITHUB_ENV
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Set environment variables for PyQt5 to find Qt
+        export QT_DIR=$(brew --prefix qt@5)
+        export PATH=$QT_DIR/bin:$PATH
+        export PKG_CONFIG_PATH=$QT_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
+        export LDFLAGS="-L$QT_DIR/lib"
+        export CPPFLAGS="-I$QT_DIR/include"
+        # Verify qmake is available
+        which qmake || echo "qmake not found in PATH"
+        qmake --version || echo "qmake version check failed"
+        # Install SIP first
+        pip install sip>=6.0.0 --no-cache-dir
+        # Try multiple PyQt5 installation methods
+        echo "尝试安装预编译 PyQt5..."
+        pip install PyQt5==5.15.10 --only-binary=all --no-cache-dir || {
+          echo "预编译版本失败，尝试从源码编译..."
+          pip install PyQt5==5.15.10 --no-binary=PyQt5 --no-cache-dir --config-settings="--qmake=$QT_DIR/bin/qmake" || {
+            echo "源码编译失败，尝试使用 PyQt5 5.15.9..."
+            pip install PyQt5==5.15.9 --no-cache-dir
+          }
+        }
+        # Install other dependencies
+        pip install psutil==5.9.5 pygame==2.5.2 pynput==1.7.6 --no-cache-dir
+        pip install pyinstaller>=5.13.0 --no-cache-dir
+        # Verify PyQt5 installation
+        python -c "import PyQt5; from PyQt5.QtCore import QT_VERSION_STR; print(f'PyQt5 installed successfully, Qt version: {QT_VERSION_STR}')"
+    
+    - name: Build macOS ${{ matrix.arch }}
+      run: |
+        python build_all.py --platforms macos --force
+    
+    - name: Upload macOS artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: saveguard-macos-${{ matrix.arch }}
+        path: dist/SaveGuard-Macos-${{ matrix.arch }}
+
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [x86_64, aarch64, armv7l]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller>=5.13.0
+    
+    - name: Build Linux ${{ matrix.arch }}
+      run: |
+        python build_all.py --platforms linux --force
+    
+    - name: Upload Linux artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: saveguard-linux-${{ matrix.arch }}
+        path: dist/SaveGuard-Linux-${{ matrix.arch }}
+
+  create-release:
+    needs: [build-windows, build-macos, build-linux]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+    
+    - name: Prepare release files
+      run: |
+        mkdir -p release
+        find . -name "SaveGuard-*.exe" -exec cp {} release/ \;
+        find . -name "SaveGuard-*" -not -name "*.exe" -exec cp {} release/ \;
+        
+        # Create README using template (default to Chinese, fallback to English)
+        if [ -f .github/workflows/release-readme-template.md ]; then
+          cp .github/workflows/release-readme-template.md release/README.md
+        else
+          cp .github/workflows/release-readme-template-en.md release/README.md
+        fi
+        echo "" >> release/README.md
+        ls -la release/ >> release/README.md
+    
+    - name: Upload release assets
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          release/SaveGuard-Windows-x64.exe
+          release/SaveGuard-Windows-x86.exe
+          release/SaveGuard-Windows-arm64.exe
+          release/SaveGuard-Macos-x86_64
+          release/SaveGuard-Macos-arm64
+          release/SaveGuard-Macos-universal
+          release/SaveGuard-Linux-x86_64
+          release/SaveGuard-Linux-aarch64
+          release/SaveGuard-Linux-armv7l
+          release/README.md
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
